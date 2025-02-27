@@ -108,8 +108,24 @@ const words3 = [
 ];
 
 function uniquifyArray(words) {
-  // TODO:
+  let compareArray = [];
+
+  words.forEach((element) => {
+    if (!compareArray.includes(element)) {
+      compareArray.push(element);
+    }
+  });
+  return compareArray;
 }
+
+console.log(uniquifyArray(words3));
+
+// Execution Plan - Unique arrays - return an array without duplicates
+// 01: benutze array methoden um jedes element des arrays zu durchlaufen
+// 02: lege einen neuen leeren array an um werte aus dem ausgangsarray darin abzuspeichern
+// 03: schaue ob der aktuelle array-wert bereits in dem neuen/leeren array bereits vorhanden ist
+// 04: wenn der wert ncoh nciht vorhanden ist, dann hinzufügen
+// 05: gebe den vergleichsarray aus
 
 // Find elements
 const wordsFind = [
