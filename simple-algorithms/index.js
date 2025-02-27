@@ -203,8 +203,24 @@ const mixedArray = [
 ];
 
 function sum(array) {
-  // TODO:
+  let numberSum = 0;
+  array.forEach((element) => {
+    if (typeof element === "string") {
+      numberSum = numberSum + element.length;
+    }
+    if (typeof element === "number") {
+      numberSum = numberSum + element;
+    }
+    if (typeof element === "boolean") {
+      if (element) {
+        numberSum = numberSum + 1;
+      }
+    }
+  });
+  return numberSum;
 }
+
+console.log(sum(mixedArray));
 
 // Bonus: Write a function that calculates the greatest product of four
 // numbers that is either horizontally or vertically in the array
