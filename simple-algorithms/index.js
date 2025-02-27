@@ -140,8 +140,23 @@ const wordsFind = [
 ];
 
 function doesWordExist(haystack, needle) {
-  // TODO:
+  if (haystack.includes(needle)) {
+    return `${needle} included in array on position ${
+      haystack.indexOf(needle) + 1
+    }`;
+  }
+  return `Word not included in array`;
 }
+
+console.log(doesWordExist(wordsFind, "ass"));
+
+// Execution Plan - Find elements
+// 01: benutze array methoden um durch jedes element des array zu durchlaufen
+// 02: übergib 2 argumente: (1) wörter die zu durchsuchen sind und (2) das wort nach dem gesucht wird
+// 03: benutze die include methode um zu prüfen ob das wort enthalten ist
+// 04: benutze die indexOf methode um die stelle zu identifizieren
+// 05: bei misserfolg gib eine fehlermeldung aus
+// 06: bei erfolg gib die stelle an der das wort gefunden wurde und das wort zurück
 
 // Count repetition
 const wordsCount = [
