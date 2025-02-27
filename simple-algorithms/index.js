@@ -141,14 +141,14 @@ const wordsFind = [
 
 function doesWordExist(haystack, needle) {
   if (haystack.includes(needle)) {
-    return `${needle} included in array on position ${
+    return `The word "${needle}" included in array on position ${
       haystack.indexOf(needle) + 1
     }`;
   }
   return `Word not included in array`;
 }
 
-console.log(doesWordExist(wordsFind, "ass"));
+console.log(doesWordExist(wordsFind, "trouble"));
 
 // Execution Plan - Find elements
 // 01: benutze array methoden um durch jedes element des array zu durchlaufen
@@ -174,8 +174,18 @@ const wordsCount = [
 ];
 
 function howManyTimes(haystack, needle) {
-  // TODO:
+  return `The word "${needle}" exists ${
+    haystack.filter((word) => needle === word).length
+  } in the array`;
 }
+
+console.log(howManyTimes(wordsCount, "matter")); // für "matter" wird rückgabe 3 erwartet
+
+// Execution Plan - Count repetition
+// 01: benutze array methoden um durch jedes element des array zu durchlaufen
+// 02: benutze filter um alle gesuchten elemente in einem neuen array zurückzuerhalten
+// 03: bestimme mit length die länge des array um die anzahl der wortfunde zurückzuerhalten
+// 04: gib für das wort die anzahl zurück (ausgabe)
 
 // Bonus: A generic sum function
 // for strings use the length of the string, for booleans use 1 and 0
